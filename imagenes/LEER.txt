@@ -1,0 +1,9 @@
+Colocá acá las imágenes de la página.
+
+Nombres usados por index.html:
+- banner-evi-nails.jpg  -> banner principal
+- foto-presentacion.jpg -> foto de presentación
+- trabajo-1.jpg
+- trabajo-2.jpg
+- trabajo-3.jpg
+- trabajo-4.jpg
