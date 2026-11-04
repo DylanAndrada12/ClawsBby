@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Claws Bby | Mis trabajos</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="imagenes/logoclaws.png">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles/estilos.css">
+</head>
+
+<body class="pagina-animada">
+
+    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+
+    <header class="barra-navegacion">
+
+        <div class="contenedor barra-contenido">
+
+            <a href="index.html" class="logo">
+                <span class="logo-nombre">Claws Bby ♡</span>
+                <span class="logo-subtitulo">MANICURÍA A TU GUSTO</span>
+            </a>
+
+            <nav class="menu-principal" aria-label="Navegación principal">
+
+                <a href="index.html" class="enlace-menu">
+                    <i data-lucide="house"></i>
+                    <span>Inicio</span>
+                </a>
+
+                <a href="trabajos.html" class="enlace-menu activo">
+                    <i data-lucide="image"></i>
+                    <span>Mis trabajos</span>
+                </a>
+
+                <a href="registrar-turno.html" class="enlace-menu">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Registrar turno</span>
+                </a>
+
+                <a href="index.html#servicios" class="enlace-menu">
+                    <i data-lucide="tag"></i>
+                    <span>Servicios y precios</span>
+                </a>
+
+            </nav>
+
+            <button class="boton-menu" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==================== GALERÍA COMPLETA ==================== -->
+
+        <section class="seccion-galeria-trabajos">
+
+            <div class="contenedor">
+
+                <div class="encabezado-galeria">
+
+                    <span class="etiqueta-seccion">MIS TRABAJOS</span>
+
+                    <h1>
+                        Una galería de
+                        <em>diseños para vos</em>
+                    </h1>
+
+                    <p>
+                        Recorré todos mis trabajos y elegí el estilo que más te guste.
+                        Tocá cualquier foto para verla en detalle. ♡
+                    </p>
+
+                </div>
+
+
+                <div class="galeria-completa">
+
+                    <!--
+                        Para agregar una nueva foto:
+                        1. Guardala dentro de la carpeta imagenes.
+                        2. Copiá uno de los bloques <button class="trabajo-item"> ... </button>.
+                        3. Cambiá el src, el alt, el data-titulo y el aria-label por los de tu nueva foto.
+                    -->
+
+                    <button type="button" class="trabajo-item" data-titulo="Acrílicas" aria-label="Ampliar foto: uñas azules con lunares y estrellas">
+                        <img
+                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (3).jpeg"
+                            alt="Uñas azules con lunares blancos y estrellas"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas rojas con mármol plateado">
+                        <img
+                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (5).jpeg"
+                            alt="Uñas rojas con diseño cat eye más cromado plateado"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Esmaltado Semipermanente" aria-label="Ampliar foto: uñas negras con gatito y huellitas">
+                        <img
+                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (2).jpeg"
+                            alt="Uñas negras con diseño de gato y huellitas"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas nude con efecto cat eye">
+                        <img
+                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (4).jpeg"
+                            alt="Uñas con efecto cat eye"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Acrílicas" aria-label="Ampliar foto: uñas rojas con francés y flores">
+                        <img
+                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25.jpeg"
+                            alt="Uñas con efecto cat eye más flor 3D"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas rosas con flores y pedrería">
+                        <img
+                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (1).jpeg"
+                            alt="Uñas rosas con efecto 3D y piedrería"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas grises con glitter">
+                        <img
+                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (1).jpeg"
+                            alt="Uñas negras con efecto cat eye más reconstrucción"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Acrílicas" aria-label="Ampliar foto: uñas marrones con francés y glitter dorado">
+                        <img
+                            src="imagenes/uñas1.jpeg"
+                            alt="Uñas marrones con efecto 3D más cromado dorado"
+                            loading="lazy"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas blancas con lunares y flores">
+                        <img
+                            src="imagenes/uñas2.jpeg"
+                            alt="Uñas blancas con lunares rojos más flor 3D"
+                            loading="lazy"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas rojas y doradas con lunares">
+                        <img
+                            src="imagenes/uñas3.jpeg"
+                            alt="Uñas rojas con lunares"
+                            loading="lazy"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas nude con animal print y detalles dorados">
+                        <img
+                            src="imagenes/uñas4.jpeg"
+                            alt="Uñas con efecto 3D cromado más blooming"
+                            loading="lazy"
+                        >
+                        <span class="trabajo-item-zoom" aria-hidden="true">
+                            <i data-lucide="maximize-2"></i>
+                            <span>Ver diseño</span>
+                        </span>
+                    </button>
+
+                </div>
+
+
+                <div class="cierre-galeria">
+
+                    <p>
+                        ¿Encontraste el diseño
+                        <em>perfecto para vos</em>? ♡
+                    </p>
+
+                    <a href="registrar-turno.html" class="boton-principal">
+                        <i data-lucide="calendar-days"></i>
+                        <span>Reservá tu turno</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer class="pie-pagina">
+
+        <div class="contenedor pie-contenido">
+
+            <div class="pie-marca">
+                <span class="logo-nombre">Claws Bby ♡</span>
+                <span class="logo-subtitulo">MANICURÍA A TU GUSTO</span>
+            </div>
+
+            <div class="redes-sociales">
+
+                <a
+                    href="https://www.instagram.com/claws.bby?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="https://wa.me/5491159372996"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a
+                    href="https://www.facebook.com/share/1Sc2dKCWpE/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Claws Bby. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================== VISOR DE IMÁGENES ==================== -->
+
+    <div
+        class="visor"
+        id="visor"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="visor-titulo"
+        aria-describedby="visor-descripcion"
+        aria-hidden="true"
+    >
+
+        <button type="button" class="visor-cerrar" aria-label="Cerrar visor">
+            <i data-lucide="x"></i>
+        </button>
+
+        <button type="button" class="visor-flecha visor-anterior" aria-label="Ver foto anterior">
+            <i data-lucide="chevron-left"></i>
+        </button>
+
+        <figure class="visor-contenido">
+            <img id="visor-imagen" src="imagenes/uñas1.jpeg" alt="">
+            <h2 class="visor-titulo" id="visor-titulo"></h2>
+            <figcaption id="visor-descripcion"></figcaption>
+        </figure>
+
+        <button type="button" class="visor-flecha visor-siguiente" aria-label="Ver foto siguiente">
+            <i data-lucide="chevron-right"></i>
+        </button>
+
+        <span class="visor-contador" id="visor-contador" aria-live="polite"></span>
+
+    </div>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script>
+        lucide.createIcons();
+
+        /* Menú principal */
+
+        const botonMenu = document.querySelector(".boton-menu");
+        const menuPrincipal = document.querySelector(".menu-principal");
+
+        botonMenu.addEventListener("click", () => {
+            menuPrincipal.classList.toggle("menu-abierto");
+        });
+
+        document.querySelectorAll(".enlace-menu").forEach((enlace) => {
+            enlace.addEventListener("click", () => {
+                menuPrincipal.classList.remove("menu-abierto");
+            });
+        });
+
+
+        /* Visor de imágenes */
+
+        const trabajos = Array.from(document.querySelectorAll(".trabajo-item"));
+        const visor = document.getElementById("visor");
+        const visorImagen = document.getElementById("visor-imagen");
+        const visorTitulo = document.getElementById("visor-titulo");
+        const visorDescripcion = document.getElementById("visor-descripcion");
+        const visorContador = document.getElementById("visor-contador");
+
+        const botonCerrar = visor.querySelector(".visor-cerrar");
+        const botonAnterior = visor.querySelector(".visor-anterior");
+        const botonSiguiente = visor.querySelector(".visor-siguiente");
+        const contenidoFondo = document.querySelectorAll("header, main, footer");
+
+        let indiceActual = 0;
+        let ultimoElementoEnfocado = null;
+
+        function mostrarImagen(indice) {
+            indiceActual = (indice + trabajos.length) % trabajos.length;
+
+            const trabajo = trabajos[indiceActual];
+            const imagen = trabajo.querySelector("img");
+            const descripcion = imagen.alt;
+            const titulo = trabajo.dataset.titulo || "Trabajo";
+
+            visorImagen.src = imagen.currentSrc || imagen.src;
+            visorImagen.alt = descripcion;
+            visorTitulo.textContent = titulo;
+            visorDescripcion.textContent = descripcion;
+            visorContador.textContent = `${indiceActual + 1} / ${trabajos.length}`;
+
+            if (visorImagen.animate) {
+                visorImagen.animate(
+                    [
+                        { opacity: 0 },
+                        { opacity: 1 }
+                    ],
+                    {
+                        duration: 220,
+                        easing: "ease-out"
+                    }
+                );
+            }
+        }
+
+        function abrirVisor(indice) {
+            ultimoElementoEnfocado = document.activeElement;
+
+            mostrarImagen(indice);
+
+            visor.classList.add("visor-abierto");
+            visor.setAttribute("aria-hidden", "false");
+            document.body.classList.add("visor-abierto");
+
+            contenidoFondo.forEach((elemento) => elemento.setAttribute("inert", ""));
+
+            // Forzamos el cálculo de estilos para que el botón ya sea visible.
+            void visor.offsetWidth;
+            botonCerrar.focus({ preventScroll: true });
+        }
+
+        function cerrarVisor() {
+            visor.classList.remove("visor-abierto");
+            visor.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("visor-abierto");
+
+            contenidoFondo.forEach((elemento) => elemento.removeAttribute("inert"));
+
+            if (ultimoElementoEnfocado) {
+                ultimoElementoEnfocado.focus();
+            }
+        }
+
+        trabajos.forEach((trabajo, indice) => {
+            trabajo.addEventListener("click", () => {
+                abrirVisor(indice);
+            });
+        });
+
+        botonCerrar.addEventListener("click", cerrarVisor);
+        botonAnterior.addEventListener("click", () => mostrarImagen(indiceActual - 1));
+        botonSiguiente.addEventListener("click", () => mostrarImagen(indiceActual + 1));
+
+        visor.addEventListener("click", (evento) => {
+            if (evento.target === visor) {
+                cerrarVisor();
+            }
+        });
+
+        document.addEventListener("keydown", (evento) => {
+            if (!visor.classList.contains("visor-abierto")) {
+                return;
+            }
+
+            if (evento.key === "Escape") {
+                cerrarVisor();
+                return;
+            }
+
+            if (evento.key === "ArrowLeft") {
+                mostrarImagen(indiceActual - 1);
+                return;
+            }
+
+            if (evento.key === "ArrowRight") {
+                mostrarImagen(indiceActual + 1);
+                return;
+            }
+
+            if (evento.key === "Tab") {
+                const elementosEnfocables = [botonCerrar, botonAnterior, botonSiguiente];
+                const primero = elementosEnfocables[0];
+                const ultimo = elementosEnfocables[elementosEnfocables.length - 1];
+
+                if (evento.shiftKey && document.activeElement === primero) {
+                    evento.preventDefault();
+                    ultimo.focus();
+                } else if (!evento.shiftKey && document.activeElement === ultimo) {
+                    evento.preventDefault();
+                    primero.focus();
+                }
+            }
+        });
+
+
+        /* Deslizar con el dedo en celular */
+
+        let toqueInicial = null;
+
+        visor.addEventListener("touchstart", (evento) => {
+            if (evento.target.closest("button")) {
+                return;
+            }
+
+            toqueInicial = evento.changedTouches[0].clientX;
+        }, { passive: true });
+
+        visor.addEventListener("touchend", (evento) => {
+            if (toqueInicial === null) {
+                return;
+            }
+
+            const distancia = evento.changedTouches[0].clientX - toqueInicial;
+            toqueInicial = null;
+
+            if (Math.abs(distancia) > 50) {
+                mostrarImagen(indiceActual + (distancia < 0 ? 1 : -1));
+            }
+        }, { passive: true });
+
+
+        /* Repetir la animación de entrada al volver con el botón Atrás */
+
+        window.addEventListener("pageshow", (evento) => {
+            if (evento.persisted) {
+                document.body.classList.remove("pagina-animada");
+                void document.body.offsetWidth;
+                document.body.classList.add("pagina-animada");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

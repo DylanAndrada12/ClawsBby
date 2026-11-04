@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="styles/estilos.css">
 </head>
 
-<body>
+<body class="pagina-animada">
 
     <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
 
@@ -50,7 +50,7 @@
                     <span>Inicio</span>
                 </a>
 
-                <a href="index.html#mis-trabajos" class="enlace-menu">
+                <a href="trabajos.html" class="enlace-menu">
                     <i data-lucide="image"></i>
                     <span>Mis trabajos</span>
                 </a>
@@ -313,6 +313,16 @@
             enlace.addEventListener("click", () => {
                 menuPrincipal.classList.remove("menu-abierto");
             });
+        });
+
+        /* Repetir la animación de entrada al volver con el botón Atrás */
+
+        window.addEventListener("pageshow", (evento) => {
+            if (evento.persisted) {
+                document.body.classList.remove("pagina-animada");
+                void document.body.offsetWidth;
+                document.body.classList.add("pagina-animada");
+            }
         });
     </script>
 

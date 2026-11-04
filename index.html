@@ -25,7 +25,7 @@
     
 </head>
 
-<body>
+<body class="pagina-animada">
 
     <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
     <header class="barra-navegacion">
@@ -42,7 +42,7 @@
                     <span>Inicio</span>
                 </a>
 
-                <a href="#mis-trabajos" class="enlace-menu">
+                <a href="trabajos.html" class="enlace-menu">
                     <i data-lucide="image"></i>
                     <span>Mis trabajos</span>
                 </a>
@@ -90,24 +90,7 @@
             <div class="decoracion decoracion-izquierda">♡</div>
             <div class="decoracion decoracion-derecha">♡</div>
 
-            <div class="contenedor presentacion-contenido">
-
-                <!-- Imagen -->
-                <div class="presentacion-imagen">
-                    <div class="mancha-rosa"></div>
-
-                    <!--
-                        REEMPLAZÁ este archivo por tu foto:
-                        imagenes/foto-presentacion.jpg
-                    -->
-                    <img
-                        src="imagenes/promoMamá.jpeg"
-                        alt="Trabajo de manicuría Evi Nails"
-                        class="foto-presentacion"
-                    >
-
-                    
-                </div>
+            <div class="contenedor presentacion-contenido presentacion-sin-imagen">
 
 
                 <!-- Texto -->
@@ -198,22 +181,30 @@
 
                 <div class="galeria-trabajos">
 
-                    <article class="trabajo">
-                        <img src="imagenes/uñas1.jpeg" alt="Diseño de uñas 1">
-                    </article>
+                    <a href="trabajos.html" class="trabajo" aria-label="Ver todos los trabajos">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (1).jpeg" alt="Diseño de uñas 1">
+                    </a>
 
-                    <article class="trabajo">
-                        <img src="imagenes/uñas2.jpeg" alt="Diseño de uñas 2">
-                    </article>
+                    <a href="trabajos.html" class="trabajo" aria-label="Ver todos los trabajos">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (2).jpeg" alt="Diseño de uñas 2">
+                    </a>
 
-                    <article class="trabajo">
-                        <img src="imagenes/uñas3.jpeg" alt="Diseño de uñas 3">
-                    </article>
+                    <a href="trabajos.html" class="trabajo" aria-label="Ver todos los trabajos">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (5).jpeg" alt="Diseño de uñas 3">
+                    </a>
 
-                    <article class="trabajo">
-                        <img src="imagenes/uñas4.jpeg" alt="Diseño de uñas 4">
-                    </article>
+                    <a href="trabajos.html" class="trabajo" aria-label="Ver todos los trabajos">
+                        <img src="imagenes/uñas1.jpeg" alt="Diseño de uñas 4">
+                    </a>
 
+                </div>
+
+                <div class="acciones-trabajos">
+                    <a href="trabajos.html" class="boton-principal">
+                        <i data-lucide="images"></i>
+                        <span>Ver todos mis trabajos</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
                 </div>
 
             </div>
@@ -258,6 +249,14 @@
                             <p>Fortalecimiento y acabado fino.</p>
                         </div>
                         <strong>12.000ARS$</strong>
+                    </article>
+
+                    <article class="servicio">
+                        <div>
+                            <h3>PolyGel</h3>
+                            <p>Extensión liviana, natural y de larga duración.</p>
+                        </div>
+                        <strong>14.000ARS$</strong>
                     </article>
 
                     <article class="servicio">
@@ -360,6 +359,16 @@
             enlace.addEventListener("click", () => {
                 menuPrincipal.classList.remove("menu-abierto");
             });
+        });
+
+        /* Repetir la animación de entrada al volver con el botón Atrás */
+
+        window.addEventListener("pageshow", (evento) => {
+            if (evento.persisted) {
+                document.body.classList.remove("pagina-animada");
+                void document.body.offsetWidth;
+                document.body.classList.add("pagina-animada");
+            }
         });
     </script>
 
