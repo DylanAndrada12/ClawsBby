@@ -34,36 +34,36 @@
             const id = capa.id;
             try {
                 if (capa.type === "background") {
-                    map.setPaintProperty(id, "background-color", "#f7ebe7");
+                    map.setPaintProperty(id, "background-color", "#211519");
                 } else if (capa.type === "raster") {
                     map.setLayoutProperty(id, "visibility", "none");
                 } else if (capa.type === "fill") {
-                    let color = "#f4e4df";
-                    if (/water/.test(id)) color = "#ead5dc";
-                    else if (/park|grass|wood|wetland|pitch|cemetery/.test(id)) color = "#efdcd3";
-                    else if (/building/.test(id)) color = "#efd3cf";
+                    let color = "#26191f";
+                    if (/water/.test(id)) color = "#1a1222";
+                    else if (/park|grass|wood|wetland|pitch|cemetery/.test(id)) color = "#281c20";
+                    else if (/building/.test(id)) color = "#3a2630";
                     map.setPaintProperty(id, "fill-color", color);
                     if (/road_area_pattern/.test(id)) map.setLayoutProperty(id, "visibility", "none");
                 } else if (capa.type === "line") {
-                    if (/waterway/.test(id)) map.setPaintProperty(id, "line-color", "#e3c8d2");
-                    else if (/casing/.test(id)) map.setPaintProperty(id, "line-color", "#ecd6d0");
-                    else if (/rail|hatching/.test(id)) map.setPaintProperty(id, "line-color", "#dcc3bd");
+                    if (/waterway/.test(id)) map.setPaintProperty(id, "line-color", "#2a1a2e");
+                    else if (/casing/.test(id)) map.setPaintProperty(id, "line-color", "#1b1115");
+                    else if (/rail|hatching/.test(id)) map.setPaintProperty(id, "line-color", "#3a2a30");
                     else if (/boundary/.test(id)) map.setLayoutProperty(id, "visibility", "none");
-                    else map.setPaintProperty(id, "line-color", "#ffffff");
+                    else map.setPaintProperty(id, "line-color", "#4a3039");
                 } else if (capa.type === "fill-extrusion") {
                     map.setPaintProperty(id, "fill-extrusion-color", [
                         "interpolate", ["linear"], ["coalesce", ["get", "render_height"], 6],
-                        0, "#f1d6d3",
-                        20, "#e7bcc0",
-                        60, "#d99ea8",
+                        0, "#3b2630",
+                        20, "#5c3346",
+                        60, "#9a3a66",
                     ]);
                     map.setPaintProperty(id, "fill-extrusion-opacity", 0.92);
                 } else if (capa.type === "symbol") {
                     if (/^poi|one_way|shield/.test(id)) {
                         map.setLayoutProperty(id, "visibility", "none");
                     } else {
-                        map.setPaintProperty(id, "text-color", "#6a3f4b");
-                        map.setPaintProperty(id, "text-halo-color", "#fff8f6");
+                        map.setPaintProperty(id, "text-color", "#ecd3da");
+                        map.setPaintProperty(id, "text-halo-color", "#1e1418");
                         map.setPaintProperty(id, "text-halo-width", 1.4);
                     }
                 }
