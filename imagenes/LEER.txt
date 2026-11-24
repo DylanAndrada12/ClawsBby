@@ -1,7 +1,7 @@
 Colocá acá las imágenes de la página.
 
 Páginas:
-- index.html            -> intro + rueda 3D de uñas (los diseños 3D están en js/catalogo3d.js)
+- index.html            -> intro + catálogo 3D con las fotos reales (girá con la rueda o deslizando)
 - trabajos.html         -> galería de fotos reales
 - servicios.html        -> precios
 - sobre-mi.html         -> sobre Evi
@@ -13,9 +13,8 @@ Para agregar una foto nueva a la galería:
 2. Abrí trabajos.html y copiá un bloque <button class="obra"> ... </button>.
 3. Cambiá el src, el alt, el aria-label, el data-titulo y el data-tipo (capping, acrilicas o semipermanente).
 
-Para sumar una uña al catálogo 3D:
-1. Abrí js/catalogo3d.js y copiá un bloque de la lista DISEÑOS.
-2. Cambiá tipo, nombre y foto (la foto real que se ve al tocar "Ver foto real").
-3. En pintar() se dibuja el diseño: color de base, punta francesa, flores, lunares, glitter, etc.
+Para sumar una foto al catálogo 3D del inicio:
+1. Abrí index.html y copiá un bloque <figure class="tarjeta"> ... </figure>.
+2. Cambiá el src, el alt, el data-tipo y el data-detalle.
 
 Los estilos de todas las páginas están en styles/claws.css.

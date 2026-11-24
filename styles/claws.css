@@ -493,32 +493,60 @@ body.intro-activa .pista { opacity: 0; transform: translateY(24px); }
 
 .escena3d:active { cursor: grabbing; }
 
-.escena3d canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; }
+/* Carrusel 3D de fotos */
+.escena3d { display: grid; place-items: center; }
 
-.escena3d-respaldo {
+.carrusel {
+    --tarjeta-w: clamp(210px, 18vw, 280px);
+    --tarjeta-h: calc(var(--tarjeta-w) * 1.36);
+    --radio: 500px;
+    position: relative;
+    width: var(--tarjeta-w);
+    height: var(--tarjeta-h);
+    perspective: 1100px;
+    perspective-origin: 50% 45%;
+    margin-top: -4vh;
+}
+
+.anillo { position: absolute; inset: 0; transform-style: preserve-3d; will-change: transform; }
+
+.tarjeta {
     position: absolute;
     inset: 0;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 24px;
-    color: var(--tinta-suave);
+    border-radius: 22px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: var(--nude);
+    box-shadow: 0 30px 60px -30px rgba(90, 40, 50, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    transition: box-shadow 0.5s var(--ease-seda);
+    -webkit-box-reflect: below 14px linear-gradient(transparent 72%, rgba(255, 255, 255, 0.22));
 }
 
-.escena3d-cargando {
+.tarjeta img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+
+.tarjeta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0.35) 0%, transparent 32%, transparent 70%, rgba(255, 255, 255, 0.12) 100%);
+    pointer-events: none;
+}
+
+.tarjeta.activa { box-shadow: 0 40px 80px -28px rgba(155, 77, 91, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.8) inset; cursor: zoom-in; }
+
+.carrusel-piso {
     position: absolute;
     left: 50%;
-    top: 50%;
-    width: 36px;
-    height: 36px;
-    margin: -18px 0 0 -18px;
+    top: calc(100% + 40px);
+    width: calc(var(--radio) * 2.1);
+    height: 120px;
+    transform: translateX(-50%);
     border-radius: 50%;
-    border: 2px solid var(--rosa-brillo);
-    border-top-color: var(--rosa-hondo);
-    animation: girar 0.9s linear infinite;
+    background: radial-gradient(ellipse at center, rgba(201, 123, 134, 0.22) 0%, transparent 68%);
+    pointer-events: none;
+    z-index: -1;
 }
-
-@keyframes girar { to { transform: rotate(360deg); } }
 
 /* ficha del diseño seleccionado */
 .inicio-ficha {
@@ -1242,7 +1270,8 @@ body.intro-activa .pista { opacity: 0; transform: translateY(24px); }
     .inicio-acciones { justify-content: center; margin-top: 18px; }
     .inicio-acciones .boton { min-height: 46px; padding: 0 22px; }
 
-    .escena3d { grid-column: 1; grid-row: 2; min-height: 330px; margin: 0 -20px; }
+    .escena3d { grid-column: 1; grid-row: 2; min-height: 330px; margin: 0 -20px; overflow: hidden; }
+    .carrusel { --tarjeta-w: min(44vw, 27svh, 240px); margin-top: -30px; }
 
     .inicio-ficha { grid-row: 3; justify-content: center; gap: 14px; }
     .contador { display: none; }

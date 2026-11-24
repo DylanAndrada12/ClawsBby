@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="imagenes/logoclaws.png">
-    <link rel="stylesheet" href="styles/claws.css?v=3">
+    <link rel="stylesheet" href="styles/claws.css?v=4">
 
     <meta name="google-site-verification" content="ZXdp_35cvwfUtnxA4OKnfTFjsxWeMD-f0pZTL9o2TxY" />
 </head>
@@ -62,15 +62,56 @@
         <div class="inicio-texto">
             <p class="kicker">Hola, soy Evi <span aria-hidden="true">♡</span></p>
             <h1>Uñas que hablan <em>de vos</em></h1>
-            <p>Un mini catálogo 3D con los diseños que ya hice. Girá la rueda y elegí tu próximo look.</p>
+            <p>Un mini catálogo 3D de mis trabajos reales. Girá la rueda y encontrá tu próximo look.</p>
             <div class="inicio-acciones">
                 <a href="registrar-turno.html" class="boton boton-relleno">Reservar turno</a>
                 <a href="trabajos.html" class="boton boton-linea">Ver trabajos</a>
             </div>
         </div>
 
-        <div class="escena3d" id="escena3d" tabindex="0" role="img" aria-label="Rueda 3D de uñas pintadas alrededor del logo de Claws Bby. Usá las flechas para girarla.">
-            <span class="escena3d-cargando" aria-hidden="true"></span>
+        <!--
+            Para sumar un diseño al catálogo copiá un bloque <figure class="tarjeta">
+            y cambiá el src, el alt, el data-tipo y el data-detalle.
+        -->
+        <div class="escena3d" id="escena3d" tabindex="0" role="group" aria-roledescription="carrusel" aria-label="Catálogo 3D de trabajos. Usá las flechas para girarlo.">
+            <div class="carrusel" id="carrusel">
+                <div class="anillo" id="anillo">
+                    <figure class="tarjeta" data-tipo="Capping" data-detalle="Rosas con flores y pedrería">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (1).jpeg" alt="Uñas: rosas con flores y pedrería" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Capping" data-detalle="Rojo con mármol plateado">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (5).jpeg" alt="Uñas: rojo con mármol plateado" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Acrílicas" data-detalle="Francés marrón con glitter dorado">
+                        <img src="imagenes/uñas1.jpeg" alt="Uñas: francés marrón con glitter dorado" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Capping" data-detalle="Nude con efecto cat eye">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (4).jpeg" alt="Uñas: nude con efecto cat eye" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Esmaltado semipermanente" data-detalle="Negras con gatito y huellitas">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (2).jpeg" alt="Uñas: negras con gatito y huellitas" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Capping" data-detalle="Blancas con lunares y flores">
+                        <img src="imagenes/uñas2.jpeg" alt="Uñas: blancas con lunares y flores" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Acrílicas" data-detalle="Azules con lunares y estrellas">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (3).jpeg" alt="Uñas: azules con lunares y estrellas" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Capping" data-detalle="Rojo y dorado con lunares">
+                        <img src="imagenes/uñas3.jpeg" alt="Uñas: rojo y dorado con lunares" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Acrílicas" data-detalle="Francés rojo con flores">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25.jpeg" alt="Uñas: francés rojo con flores" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Capping" data-detalle="Nude, animal print y dorado">
+                        <img src="imagenes/uñas4.jpeg" alt="Uñas: nude, animal print y dorado" draggable="false">
+                    </figure>
+                    <figure class="tarjeta" data-tipo="Capping" data-detalle="Grises con glitter">
+                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (1).jpeg" alt="Uñas: grises con glitter" draggable="false">
+                    </figure>
+                </div>
+                <div class="carrusel-piso" aria-hidden="true"></div>
+            </div>
         </div>
 
         <div class="inicio-ficha">
@@ -81,7 +122,7 @@
             </div>
             <button type="button" class="foto-real" id="foto-real">
                 <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (1).jpeg" alt="">
-                <span>Ver foto real<small>de este trabajo</small></span>
+                <span>Ver en grande<small>este trabajo</small></span>
             </button>
             <div class="controles">
                 <button type="button" class="control" id="anterior" aria-label="Diseño anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg></button>
@@ -103,13 +144,7 @@
         <p id="visor-texto"></p>
     </dialog>
 
-    <script src="js/comun.js?v=3" defer></script>
-    <script type="importmap">
-        { "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
-        } }
-    </script>
-    <script type="module" src="js/inicio.js?v=3"></script>
+    <script src="js/comun.js?v=4" defer></script>
+    <script src="js/inicio.js?v=4" defer></script>
 </body>
 </html>
