@@ -1,525 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Claws Bby | Mis trabajos</title>
+    <meta name="description" content="Galería de trabajos reales de Claws Bby: capping, acrílicas y esmaltado semipermanente.">
+    <meta name="theme-color" content="#fbf3f1">
 
-    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-
-    <!-- Iconos -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="imagenes/logoclaws.png">
+    <link rel="stylesheet" href="styles/claws.css?v=3">
 
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="styles/estilos.css">
+    <meta name="google-site-verification" content="ZXdp_35cvwfUtnxA4OKnfTFjsxWeMD-f0pZTL9o2TxY" />
 </head>
 
-<body class="pagina-animada">
+<body>
 
-    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
 
-    <header class="barra-navegacion">
+    <header class="nav" id="nav">
+        <a href="index.html" class="nav-logo" aria-label="Claws Bby, inicio">
+            <span class="nav-logo-firma">Claws bby</span>
+            <span class="nav-logo-sub">Manicuría a tu gusto</span>
+        </a>
 
-        <div class="contenedor barra-contenido">
+        <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="trabajos.html" aria-current="page">Trabajos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="registrar-turno.html" class="nav-cta">Reservar turno</a>
+        </nav>
 
-            <a href="index.html" class="logo">
-                <span class="logo-nombre">Claws Bby ♡</span>
-                <span class="logo-subtitulo">MANICURÍA A TU GUSTO</span>
-            </a>
-
-            <nav class="menu-principal" aria-label="Navegación principal">
-
-                <a href="index.html" class="enlace-menu">
-                    <i data-lucide="house"></i>
-                    <span>Inicio</span>
-                </a>
-
-                <a href="trabajos.html" class="enlace-menu activo">
-                    <i data-lucide="image"></i>
-                    <span>Mis trabajos</span>
-                </a>
-
-                <a href="registrar-turno.html" class="enlace-menu">
-                    <i data-lucide="calendar-days"></i>
-                    <span>Registrar turno</span>
-                </a>
-
-                <a href="index.html#servicios" class="enlace-menu">
-                    <i data-lucide="tag"></i>
-                    <span>Servicios y precios</span>
-                </a>
-
-            </nav>
-
-            <button class="boton-menu" aria-label="Abrir menú">
-                <i data-lucide="menu"></i>
-            </button>
-
-        </div>
-
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span>
+        </button>
     </header>
-
-
-    <main>
-
-        <!-- ==================== GALERÍA COMPLETA ==================== -->
-
-        <section class="seccion-galeria-trabajos">
-
+<main id="contenido">
+        <header class="cabecera">
             <div class="contenedor">
-
-                <div class="encabezado-galeria">
-
-                    <span class="etiqueta-seccion">MIS TRABAJOS</span>
-
-                    <h1>
-                        Una galería de
-                        <em>diseños para vos</em>
-                    </h1>
-
-                    <p>
-                        Recorré todos mis trabajos y elegí el estilo que más te guste.
-                        Tocá cualquier foto para verla en detalle. ♡
-                    </p>
-
-                </div>
-
-
-                <div class="galeria-completa">
-
-                    <!--
-                        Para agregar una nueva foto:
-                        1. Guardala dentro de la carpeta imagenes.
-                        2. Copiá uno de los bloques <button class="trabajo-item"> ... </button>.
-                        3. Cambiá el src, el alt, el data-titulo y el aria-label por los de tu nueva foto.
-                    -->
-
-                    <button type="button" class="trabajo-item" data-titulo="Acrílicas" aria-label="Ampliar foto: uñas azules con lunares y estrellas">
-                        <img
-                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (3).jpeg"
-                            alt="Uñas azules con lunares blancos y estrellas"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas rojas con mármol plateado">
-                        <img
-                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (5).jpeg"
-                            alt="Uñas rojas con diseño cat eye más cromado plateado"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Esmaltado Semipermanente" aria-label="Ampliar foto: uñas negras con gatito y huellitas">
-                        <img
-                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (2).jpeg"
-                            alt="Uñas negras con diseño de gato y huellitas"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas nude con efecto cat eye">
-                        <img
-                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (4).jpeg"
-                            alt="Uñas con efecto cat eye"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Acrílicas" aria-label="Ampliar foto: uñas rojas con francés y flores">
-                        <img
-                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25.jpeg"
-                            alt="Uñas con efecto cat eye más flor 3D"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas rosas con flores y pedrería">
-                        <img
-                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (1).jpeg"
-                            alt="Uñas rosas con efecto 3D y piedrería"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas grises con glitter">
-                        <img
-                            src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (1).jpeg"
-                            alt="Uñas negras con efecto cat eye más reconstrucción"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Acrílicas" aria-label="Ampliar foto: uñas marrones con francés y glitter dorado">
-                        <img
-                            src="imagenes/uñas1.jpeg"
-                            alt="Uñas marrones con efecto 3D más cromado dorado"
-                            loading="lazy"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas blancas con lunares y flores">
-                        <img
-                            src="imagenes/uñas2.jpeg"
-                            alt="Uñas blancas con lunares rojos más flor 3D"
-                            loading="lazy"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas rojas y doradas con lunares">
-                        <img
-                            src="imagenes/uñas3.jpeg"
-                            alt="Uñas rojas con lunares"
-                            loading="lazy"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                    <button type="button" class="trabajo-item" data-titulo="Capping" aria-label="Ampliar foto: uñas nude con animal print y detalles dorados">
-                        <img
-                            src="imagenes/uñas4.jpeg"
-                            alt="Uñas con efecto 3D cromado más blooming"
-                            loading="lazy"
-                        >
-                        <span class="trabajo-item-zoom" aria-hidden="true">
-                            <i data-lucide="maximize-2"></i>
-                            <span>Ver diseño</span>
-                        </span>
-                    </button>
-
-                </div>
-
-
-                <div class="cierre-galeria">
-
-                    <p>
-                        ¿Encontraste el diseño
-                        <em>perfecto para vos</em>? ♡
-                    </p>
-
-                    <a href="registrar-turno.html" class="boton-principal">
-                        <i data-lucide="calendar-days"></i>
-                        <span>Reservá tu turno</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-
-                </div>
-
+                <p class="kicker">Mis trabajos</p>
+                <h1>Diseños que hablan <em>de vos</em></h1>
+                <p class="bajada">Todos los trabajos son reales y hechos por mí. Tocá una foto para verla grande.</p>
             </div>
+            <span class="cabecera-firma" aria-hidden="true">trabajos</span>
+        </header>
 
+        <section class="seccion">
+            <div class="contenedor">
+                <!--
+                    Para sumar una foto: guardala en imagenes/ y copiá un bloque <button class="obra">.
+                    Cambiá el src, el alt, el data-titulo y el data-tipo (capping, acrilicas o semipermanente).
+                -->
+                <div class="filtros" role="group" aria-label="Filtrar por servicio">
+                    <button type="button" class="filtro" data-filtro="todos" aria-pressed="true">Todos</button>
+                    <button type="button" class="filtro" data-filtro="capping" aria-pressed="false">Capping</button>
+                    <button type="button" class="filtro" data-filtro="acrilicas" aria-pressed="false">Acrílicas</button>
+                    <button type="button" class="filtro" data-filtro="semipermanente" aria-pressed="false">Semipermanente</button>
+                </div>
+                <div class="galeria">
+                <button type="button" class="obra revelar" data-tipo="capping" data-tipo-nombre="Capping" data-titulo="Rosas con flores y pedrería" aria-label="Ampliar foto: Rosas con flores y pedrería">
+                    <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (1).jpeg" alt="Uñas: rosas con flores y pedrería" loading="lazy">
+                    <span class="obra-texto"><small>Capping</small><span>Rosas con flores y pedrería</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="capping" data-tipo-nombre="Capping" data-titulo="Rojo con mármol plateado" aria-label="Ampliar foto: Rojo con mármol plateado">
+                    <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (5).jpeg" alt="Uñas: rojo con mármol plateado" loading="lazy">
+                    <span class="obra-texto"><small>Capping</small><span>Rojo con mármol plateado</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="acrilicas" data-tipo-nombre="Acrílicas" data-titulo="Francés marrón con glitter dorado" aria-label="Ampliar foto: Francés marrón con glitter dorado">
+                    <img src="imagenes/uñas1.jpeg" alt="Uñas: francés marrón con glitter dorado" loading="lazy">
+                    <span class="obra-texto"><small>Acrílicas</small><span>Francés marrón con glitter dorado</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="capping" data-tipo-nombre="Capping" data-titulo="Nude con efecto cat eye" aria-label="Ampliar foto: Nude con efecto cat eye">
+                    <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (4).jpeg" alt="Uñas: nude con efecto cat eye" loading="lazy">
+                    <span class="obra-texto"><small>Capping</small><span>Nude con efecto cat eye</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="semipermanente" data-tipo-nombre="Esmaltado semipermanente" data-titulo="Negras con gatito y huellitas" aria-label="Ampliar foto: Negras con gatito y huellitas">
+                    <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (2).jpeg" alt="Uñas: negras con gatito y huellitas" loading="lazy">
+                    <span class="obra-texto"><small>Esmaltado semipermanente</small><span>Negras con gatito y huellitas</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="capping" data-tipo-nombre="Capping" data-titulo="Blancas con lunares y flores" aria-label="Ampliar foto: Blancas con lunares y flores">
+                    <img src="imagenes/uñas2.jpeg" alt="Uñas: blancas con lunares y flores" loading="lazy">
+                    <span class="obra-texto"><small>Capping</small><span>Blancas con lunares y flores</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="acrilicas" data-tipo-nombre="Acrílicas" data-titulo="Azules con lunares y estrellas" aria-label="Ampliar foto: Azules con lunares y estrellas">
+                    <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (3).jpeg" alt="Uñas: azules con lunares y estrellas" loading="lazy">
+                    <span class="obra-texto"><small>Acrílicas</small><span>Azules con lunares y estrellas</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="capping" data-tipo-nombre="Capping" data-titulo="Rojo y dorado con lunares" aria-label="Ampliar foto: Rojo y dorado con lunares">
+                    <img src="imagenes/uñas3.jpeg" alt="Uñas: rojo y dorado con lunares" loading="lazy">
+                    <span class="obra-texto"><small>Capping</small><span>Rojo y dorado con lunares</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="acrilicas" data-tipo-nombre="Acrílicas" data-titulo="Francés rojo con flores" aria-label="Ampliar foto: Francés rojo con flores">
+                    <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25.jpeg" alt="Uñas: francés rojo con flores" loading="lazy">
+                    <span class="obra-texto"><small>Acrílicas</small><span>Francés rojo con flores</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="capping" data-tipo-nombre="Capping" data-titulo="Nude, animal print y dorado" aria-label="Ampliar foto: Nude, animal print y dorado">
+                    <img src="imagenes/uñas4.jpeg" alt="Uñas: nude, animal print y dorado" loading="lazy">
+                    <span class="obra-texto"><small>Capping</small><span>Nude, animal print y dorado</span></span>
+                </button>
+                <button type="button" class="obra revelar" data-tipo="capping" data-tipo-nombre="Capping" data-titulo="Grises con glitter" aria-label="Ampliar foto: Grises con glitter">
+                    <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (1).jpeg" alt="Uñas: grises con glitter" loading="lazy">
+                    <span class="obra-texto"><small>Capping</small><span>Grises con glitter</span></span>
+                </button>
+                </div>
+            </div>
         </section>
 
+        <section class="final">
+            <div class="contenedor final-contenido revelar">
+                <p class="final-firma" aria-hidden="true">Claws bby</p>
+                <h2>¿Te gustó alguno? <em>Hagámoslo para vos</em></h2>
+                <a href="registrar-turno.html" class="boton boton-claro">Registrar turno</a>
+            </div>
+        </section>
     </main>
 
-
-    <!-- ==================== FOOTER ==================== -->
-
-    <footer class="pie-pagina">
-
+    <footer class="pie">
         <div class="contenedor pie-contenido">
-
-            <div class="pie-marca">
-                <span class="logo-nombre">Claws Bby ♡</span>
-                <span class="logo-subtitulo">MANICURÍA A TU GUSTO</span>
+            <a href="index.html" class="pie-firma">Claws bby</a>
+            <div class="pie-redes">
+                <a href="https://www.instagram.com/claws.bby" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://wa.me/5491159372996" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/share/1Sc2dKCWpE/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
             </div>
-
-            <div class="redes-sociales">
-
-                <a
-                    href="https://www.instagram.com/claws.bby?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                >
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a
-                    href="https://wa.me/5491159372996"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="WhatsApp"
-                >
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <a
-                    href="https://www.facebook.com/share/1Sc2dKCWpE/?mibextid=wwXIfr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                >
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-
-            </div>
-
-            <p class="copyright">
-                © 2026 Claws Bby. Todos los derechos reservados.
-            </p>
-
+            <p>© 2026 Claws Bby · Recondo 961, Villa Fiorito</p>
         </div>
-
     </footer>
 
+    <dialog class="visor" id="visor" aria-label="Foto ampliada">
+        <button type="button" class="visor-cerrar" id="visor-cerrar" aria-label="Cerrar">✕</button>
+        <button type="button" class="visor-nav visor-anterior" aria-label="Foto anterior">‹</button>
+        <img id="visor-img" src="data:," alt="">
+        <button type="button" class="visor-nav visor-siguiente" aria-label="Foto siguiente">›</button>
+        <p id="visor-texto"></p>
+    </dialog>
 
-    <!-- ==================== VISOR DE IMÁGENES ==================== -->
-
-    <div
-        class="visor"
-        id="visor"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="visor-titulo"
-        aria-describedby="visor-descripcion"
-        aria-hidden="true"
-    >
-
-        <button type="button" class="visor-cerrar" aria-label="Cerrar visor">
-            <i data-lucide="x"></i>
-        </button>
-
-        <button type="button" class="visor-flecha visor-anterior" aria-label="Ver foto anterior">
-            <i data-lucide="chevron-left"></i>
-        </button>
-
-        <figure class="visor-contenido">
-            <img id="visor-imagen" src="imagenes/uñas1.jpeg" alt="">
-            <h2 class="visor-titulo" id="visor-titulo"></h2>
-            <figcaption id="visor-descripcion"></figcaption>
-        </figure>
-
-        <button type="button" class="visor-flecha visor-siguiente" aria-label="Ver foto siguiente">
-            <i data-lucide="chevron-right"></i>
-        </button>
-
-        <span class="visor-contador" id="visor-contador" aria-live="polite"></span>
-
-    </div>
-
-
-    <!-- ==================== JAVASCRIPT ==================== -->
-
-    <script>
-        lucide.createIcons();
-
-        /* Menú principal */
-
-        const botonMenu = document.querySelector(".boton-menu");
-        const menuPrincipal = document.querySelector(".menu-principal");
-
-        botonMenu.addEventListener("click", () => {
-            menuPrincipal.classList.toggle("menu-abierto");
-        });
-
-        document.querySelectorAll(".enlace-menu").forEach((enlace) => {
-            enlace.addEventListener("click", () => {
-                menuPrincipal.classList.remove("menu-abierto");
-            });
-        });
-
-
-        /* Visor de imágenes */
-
-        const trabajos = Array.from(document.querySelectorAll(".trabajo-item"));
-        const visor = document.getElementById("visor");
-        const visorImagen = document.getElementById("visor-imagen");
-        const visorTitulo = document.getElementById("visor-titulo");
-        const visorDescripcion = document.getElementById("visor-descripcion");
-        const visorContador = document.getElementById("visor-contador");
-
-        const botonCerrar = visor.querySelector(".visor-cerrar");
-        const botonAnterior = visor.querySelector(".visor-anterior");
-        const botonSiguiente = visor.querySelector(".visor-siguiente");
-        const contenidoFondo = document.querySelectorAll("header, main, footer");
-
-        let indiceActual = 0;
-        let ultimoElementoEnfocado = null;
-
-        function mostrarImagen(indice) {
-            indiceActual = (indice + trabajos.length) % trabajos.length;
-
-            const trabajo = trabajos[indiceActual];
-            const imagen = trabajo.querySelector("img");
-            const descripcion = imagen.alt;
-            const titulo = trabajo.dataset.titulo || "Trabajo";
-
-            visorImagen.src = imagen.currentSrc || imagen.src;
-            visorImagen.alt = descripcion;
-            visorTitulo.textContent = titulo;
-            visorDescripcion.textContent = descripcion;
-            visorContador.textContent = `${indiceActual + 1} / ${trabajos.length}`;
-
-            if (visorImagen.animate) {
-                visorImagen.animate(
-                    [
-                        { opacity: 0 },
-                        { opacity: 1 }
-                    ],
-                    {
-                        duration: 220,
-                        easing: "ease-out"
-                    }
-                );
-            }
-        }
-
-        function abrirVisor(indice) {
-            ultimoElementoEnfocado = document.activeElement;
-
-            mostrarImagen(indice);
-
-            visor.classList.add("visor-abierto");
-            visor.setAttribute("aria-hidden", "false");
-            document.body.classList.add("visor-abierto");
-
-            contenidoFondo.forEach((elemento) => elemento.setAttribute("inert", ""));
-
-            // Forzamos el cálculo de estilos para que el botón ya sea visible.
-            void visor.offsetWidth;
-            botonCerrar.focus({ preventScroll: true });
-        }
-
-        function cerrarVisor() {
-            visor.classList.remove("visor-abierto");
-            visor.setAttribute("aria-hidden", "true");
-            document.body.classList.remove("visor-abierto");
-
-            contenidoFondo.forEach((elemento) => elemento.removeAttribute("inert"));
-
-            if (ultimoElementoEnfocado) {
-                ultimoElementoEnfocado.focus();
-            }
-        }
-
-        trabajos.forEach((trabajo, indice) => {
-            trabajo.addEventListener("click", () => {
-                abrirVisor(indice);
-            });
-        });
-
-        botonCerrar.addEventListener("click", cerrarVisor);
-        botonAnterior.addEventListener("click", () => mostrarImagen(indiceActual - 1));
-        botonSiguiente.addEventListener("click", () => mostrarImagen(indiceActual + 1));
-
-        visor.addEventListener("click", (evento) => {
-            if (evento.target === visor) {
-                cerrarVisor();
-            }
-        });
-
-        document.addEventListener("keydown", (evento) => {
-            if (!visor.classList.contains("visor-abierto")) {
-                return;
-            }
-
-            if (evento.key === "Escape") {
-                cerrarVisor();
-                return;
-            }
-
-            if (evento.key === "ArrowLeft") {
-                mostrarImagen(indiceActual - 1);
-                return;
-            }
-
-            if (evento.key === "ArrowRight") {
-                mostrarImagen(indiceActual + 1);
-                return;
-            }
-
-            if (evento.key === "Tab") {
-                const elementosEnfocables = [botonCerrar, botonAnterior, botonSiguiente];
-                const primero = elementosEnfocables[0];
-                const ultimo = elementosEnfocables[elementosEnfocables.length - 1];
-
-                if (evento.shiftKey && document.activeElement === primero) {
-                    evento.preventDefault();
-                    ultimo.focus();
-                } else if (!evento.shiftKey && document.activeElement === ultimo) {
-                    evento.preventDefault();
-                    primero.focus();
-                }
-            }
-        });
-
-
-        /* Deslizar con el dedo en celular */
-
-        let toqueInicial = null;
-
-        visor.addEventListener("touchstart", (evento) => {
-            if (evento.target.closest("button")) {
-                return;
-            }
-
-            toqueInicial = evento.changedTouches[0].clientX;
-        }, { passive: true });
-
-        visor.addEventListener("touchend", (evento) => {
-            if (toqueInicial === null) {
-                return;
-            }
-
-            const distancia = evento.changedTouches[0].clientX - toqueInicial;
-            toqueInicial = null;
-
-            if (Math.abs(distancia) > 50) {
-                mostrarImagen(indiceActual + (distancia < 0 ? 1 : -1));
-            }
-        }, { passive: true });
-
-
-        /* Repetir la animación de entrada al volver con el botón Atrás */
-
-        window.addEventListener("pageshow", (evento) => {
-            if (evento.persisted) {
-                document.body.classList.remove("pagina-animada");
-                void document.body.offsetWidth;
-                document.body.classList.add("pagina-animada");
-            }
-        });
-    </script>
-
+    <script src="js/comun.js?v=3" defer></script>
+    <script src="js/trabajos.js?v=3" defer></script>
 </body>
-
 </html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Claws Bby | Sobre mí</title>
+    <meta name="description" content="Conocé a Evi, la manicurista de Claws Bby.">
+    <meta name="theme-color" content="#fbf3f1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="imagenes/logoclaws.png">
+    <link rel="stylesheet" href="styles/claws.css?v=3">
+
+    <meta name="google-site-verification" content="ZXdp_35cvwfUtnxA4OKnfTFjsxWeMD-f0pZTL9o2TxY" />
+</head>
+
+<body>
+
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="nav" id="nav">
+        <a href="index.html" class="nav-logo" aria-label="Claws Bby, inicio">
+            <span class="nav-logo-firma">Claws bby</span>
+            <span class="nav-logo-sub">Manicuría a tu gusto</span>
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="trabajos.html">Trabajos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="sobre-mi.html" aria-current="page">Sobre mí</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="registrar-turno.html" class="nav-cta">Reservar turno</a>
+        </nav>
+
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span>
+        </button>
+    </header>
+<main id="contenido">
+        <header class="cabecera">
+            <div class="contenedor">
+                <p class="kicker">Sobre mí</p>
+                <h1>Hola, soy <em>Evi</em></h1>
+                <p class="bajada">La manicurista detrás de Claws Bby.</p>
+            </div>
+            <span class="cabecera-firma" aria-hidden="true">Evi</span>
+        </header>
+
+        <section class="seccion">
+            <div class="contenedor sobre-grid">
+                <div class="sobre-foto revelar">
+                    <img src="imagenes/uñas4.jpeg" alt="Trabajo de Evi: uñas nude con animal print y detalles dorados" loading="lazy">
+                    <span class="sobre-sello" aria-hidden="true">Evi</span>
+                </div>
+                <div class="sobre-texto">
+                    <h2 class="revelar">Tus manos también <em>merecen brillar</em></h2>
+                    <p class="revelar">Me llamo Evi. Creo que unas uñas lindas no son solamente un detalle, sino una forma de expresar quién sos.</p>
+                    <p class="revelar">Mi objetivo es que cada vez que vengas tengas un momento para vos, con diseños que te representen, productos de calidad y una atención totalmente personalizada.</p>
+                    <ul class="valores">
+                        <li class="revelar"><span class="valor-num">01</span><div><h3>Diseños únicos</h3><p>Cada estilo tiene su propia esencia.</p></div></li>
+                        <li class="revelar"><span class="valor-num">02</span><div><h3>Atención personalizada</h3><p>Porque cada clienta es especial.</p></div></li>
+                        <li class="revelar"><span class="valor-num">03</span><div><h3>Ambiente relajado</h3><p>Tu momento de cuidado también es bienestar.</p></div></li>
+                        <li class="revelar"><span class="valor-num">04</span><div><h3>Productos de calidad</h3><p>Para un acabado duradero y seguro.</p></div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cita">
+            <div class="contenedor revelar">
+                <blockquote>“Estoy esperando conocerte y crear juntas unas uñas que hablen de vos.”</blockquote>
+                <cite>Evi</cite>
+            </div>
+        </section>
+
+        <section class="final">
+            <div class="contenedor final-contenido revelar">
+                <p class="final-firma" aria-hidden="true">Claws bby</p>
+                <h2>Reservá tu momento <em>conmigo</em></h2>
+                <a href="registrar-turno.html" class="boton boton-claro">Registrar turno</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie-contenido">
+            <a href="index.html" class="pie-firma">Claws bby</a>
+            <div class="pie-redes">
+                <a href="https://www.instagram.com/claws.bby" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://wa.me/5491159372996" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/share/1Sc2dKCWpE/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            </div>
+            <p>© 2026 Claws Bby · Recondo 961, Villa Fiorito</p>
+        </div>
+    </footer>
+
+    <dialog class="visor" id="visor" aria-label="Foto ampliada">
+        <button type="button" class="visor-cerrar" id="visor-cerrar" aria-label="Cerrar">✕</button>
+        <button type="button" class="visor-nav visor-anterior" aria-label="Foto anterior">‹</button>
+        <img id="visor-img" src="data:," alt="">
+        <button type="button" class="visor-nav visor-siguiente" aria-label="Foto siguiente">›</button>
+        <p id="visor-texto"></p>
+    </dialog>
+
+    <script src="js/comun.js?v=3" defer></script>
+</body>
+</html>

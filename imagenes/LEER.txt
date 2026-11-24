@@ -1,11 +1,21 @@
 Colocá acá las imágenes de la página.
 
-Imágenes usadas actualmente:
-- banner-evi-nails.jpg -> banner principal
-- uñas1.jpeg, uñas2.jpeg, uñas3.jpeg y uñas4.jpeg -> vista previa de trabajos en index.html
-- las fotos "WhatsApp Image ..." -> galería completa de trabajos.html
+Páginas:
+- index.html            -> intro + rueda 3D de uñas (los diseños 3D están en js/catalogo3d.js)
+- trabajos.html         -> galería de fotos reales
+- servicios.html        -> precios
+- sobre-mi.html         -> sobre Evi
+- contacto.html         -> redes + mapa 3D (coordenadas en js/mapa.js, constante UBICACION)
+- registrar-turno.html  -> arma el mensaje y abre WhatsApp
 
-Para agregar una foto nueva:
+Para agregar una foto nueva a la galería:
 1. Guardala en esta carpeta.
-2. Abrí trabajos.html y copiá un bloque <button class="trabajo-item"> ... </button>.
-3. Cambiá el src, el alt, el aria-label y el data-titulo por los de la nueva imagen.
+2. Abrí trabajos.html y copiá un bloque <button class="obra"> ... </button>.
+3. Cambiá el src, el alt, el aria-label, el data-titulo y el data-tipo (capping, acrilicas o semipermanente).
+
+Para sumar una uña al catálogo 3D:
+1. Abrí js/catalogo3d.js y copiá un bloque de la lista DISEÑOS.
+2. Cambiá tipo, nombre y foto (la foto real que se ve al tocar "Ver foto real").
+3. En pintar() se dibuja el diseño: color de base, punta francesa, flores, lunares, glitter, etc.
+
+Los estilos de todas las páginas están en styles/claws.css.
