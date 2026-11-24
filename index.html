@@ -2,375 +2,384 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>Claws Bby | Manicuría</title>
+    <title>Claws Bby | Manicuría a tu gusto · Villa Fiorito</title>
+    <meta name="description" content="Claws Bby, manicuría a tu gusto en Villa Fiorito, Lomas de Zamora. Esmaltado semipermanente, dipping, kapping, polygel y uñas acrílicas. Reservá tu turno.">
+    <meta name="theme-color" content="#fbf3f1">
 
-    <!-- Tipografía -->
+    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-    <!-- Iconos -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Iconos de redes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="imagenes/logoclaws.png">
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="styles/estilos.css">
+    <!-- Mapa 3D -->
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+
+    <!-- Estilos de la landing -->
+    <link rel="stylesheet" href="styles/landing.css">
 
     <meta name="google-site-verification" content="ZXdp_35cvwfUtnxA4OKnfTFjsxWeMD-f0pZTL9o2TxY" />
-    
 </head>
 
-<body class="pagina-animada">
+<body class="intro-activa">
 
-    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
-    <header class="barra-navegacion">
-        <div class="contenedor barra-contenido">
+    <a class="saltar-contenido" href="#catalogo">Saltar al contenido</a>
 
-            <a href="#inicio" class="logo">
-                <span class="logo-nombre">Claws Bby ♡</span>
-                <span class="logo-subtitulo">MANICURÍA A TU GUSTO</span>
-            </a>
+    <!-- ==================== INTRO ANIMADA ==================== -->
+    <div class="intro" id="intro" aria-hidden="true">
+        <div class="intro-brillo"></div>
 
-            <nav class="menu-principal" aria-label="Navegación principal">
-                <a href="#inicio" class="enlace-menu activo">
-                    <i data-lucide="house"></i>
-                    <span>Inicio</span>
-                </a>
+        <div class="intro-centro">
+            <svg class="intro-mano" viewBox="0 0 120 70" aria-hidden="true">
+                <path d="M6 64 C 22 22, 98 22, 114 64" />
+            </svg>
 
-                <a href="trabajos.html" class="enlace-menu">
-                    <i data-lucide="image"></i>
-                    <span>Mis trabajos</span>
-                </a>
+            <svg class="intro-firma" viewBox="0 0 640 200" aria-hidden="true">
+                <text x="50%" y="62%" text-anchor="middle">Claws bby</text>
+            </svg>
 
-                <a href="registrar-turno.html" class="enlace-menu">
-                    <i data-lucide="calendar-days"></i>
-                    <span>Registrar turno</span>
-                </a>
+            <p class="intro-sub">
+                <span>M</span><span>a</span><span>n</span><span>i</span><span>c</span><span>u</span><span>r</span><span>í</span><span>a</span>
+                <span class="hueco"></span>
+                <span>a</span>
+                <span class="hueco"></span>
+                <span>t</span><span>u</span>
+                <span class="hueco"></span>
+                <span>g</span><span>u</span><span>s</span><span>t</span><span>o</span>
+            </p>
 
-                <a href="#servicios" class="enlace-menu">
-                    <i data-lucide="tag"></i>
-                    <span>Servicios y precios</span>
-                </a>
-            </nav>
-
-            <button class="boton-menu" aria-label="Abrir menú">
-                <i data-lucide="menu"></i>
-            </button>
-
+            <svg class="intro-corazon" viewBox="0 0 24 22" aria-hidden="true">
+                <path d="M12 21 C 4 15, 1 10.5, 1 6.5 C 1 3.4, 3.4 1, 6.4 1 C 8.6 1, 10.6 2.3, 12 4.3 C 13.4 2.3, 15.4 1, 17.6 1 C 20.6 1, 23 3.4, 23 6.5 C 23 10.5, 20 15, 12 21 Z" />
+            </svg>
         </div>
+
+        <button class="intro-saltar" type="button" id="intro-saltar">Saltar intro</button>
+    </div>
+
+
+    <!-- ==================== NAVEGACIÓN ==================== -->
+    <header class="nav" id="nav">
+        <a href="#catalogo" class="nav-logo" aria-label="Claws Bby, inicio">
+            <span class="nav-logo-firma">Claws bby</span>
+            <span class="nav-logo-sub">Manicuría a tu gusto</span>
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+            <a href="#catalogo">Catálogo</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#servicios">Servicios</a>
+            <a href="trabajos.html">Galería</a>
+            <a href="#contacto">Contacto</a>
+            <a href="registrar-turno.html" class="nav-cta">Reservar turno</a>
+        </nav>
+
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span>
+        </button>
     </header>
 
 
     <main>
 
-        <!-- ==================== HERO / BANNER ==================== -->
-        <section id="inicio" class="seccion-hero">
+        <!-- ==================== CATÁLOGO 3D ==================== -->
+        <!--
+            Para sumar un diseño al catálogo copiá un bloque <figure class="tarjeta">
+            y cambiá el src, el alt, el data-tipo y el data-detalle.
+        -->
+        <section class="catalogo" id="catalogo" aria-label="Catálogo de diseños">
+            <div class="catalogo-escena" id="catalogo-escena">
 
-            <!--
-                REEMPLAZÁ este archivo por tu banner:
-                imagenes/banner-evi-nails.jpg
-            -->
-            <img
-                src="imagenes/banner-evi-nails.jpg"
-                alt="Evi Nails - Manicuría profesional"
-                class="imagen-banner"
-            >
+                <div class="catalogo-fondo" aria-hidden="true">
+                    <span class="orbe orbe-1"></span>
+                    <span class="orbe orbe-2"></span>
+                    <span class="palabra-fondo">nails</span>
+                </div>
 
-        </section>
+                <div class="catalogo-texto">
+                    <p class="kicker">Hola, soy Evi <span aria-hidden="true">♡</span></p>
+                    <h1>Uñas que hablan <em>de vos</em></h1>
+                    <p class="catalogo-bajada">Un mini catálogo de mis trabajos reales. Girá la rueda y encontrá tu próximo look.</p>
+                </div>
 
+                <div class="carrusel" id="carrusel" tabindex="0" role="group" aria-roledescription="carrusel" aria-label="Diseños de uñas. Usá las flechas para girar.">
+                    <div class="anillo" id="anillo">
 
-        <!-- ==================== PRESENTACIÓN ==================== -->
-        <section class="seccion-presentacion">
+                        <figure class="tarjeta" data-tipo="Capping" data-detalle="Rosas con flores y pedrería">
+                            <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (1).jpeg" alt="Uñas rosas con flores y pedrería" draggable="false">
+                        </figure>
 
-            <div class="decoracion decoracion-izquierda">♡</div>
-            <div class="decoracion decoracion-derecha">♡</div>
+                        <figure class="tarjeta" data-tipo="Capping" data-detalle="Rojo con mármol plateado">
+                            <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (5).jpeg" alt="Uñas rojas con mármol plateado" draggable="false">
+                        </figure>
 
-            <div class="contenedor presentacion-contenido presentacion-sin-imagen">
+                        <figure class="tarjeta" data-tipo="Acrílicas" data-detalle="Francés marrón con glitter dorado">
+                            <img src="imagenes/uñas1.jpeg" alt="Uñas marrones con francés y glitter dorado" draggable="false">
+                        </figure>
 
+                        <figure class="tarjeta" data-tipo="Capping" data-detalle="Nude con efecto cat eye">
+                            <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (4).jpeg" alt="Uñas nude con efecto cat eye" draggable="false">
+                        </figure>
 
-                <!-- Texto -->
-                <div class="presentacion-texto">
+                        <figure class="tarjeta" data-tipo="Esmaltado semipermanente" data-detalle="Negras con gatito y huellitas">
+                            <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (2).jpeg" alt="Uñas negras con gatito y huellitas" draggable="false">
+                        </figure>
 
-                    <span class="etiqueta-seccion">HOLA, SOY EVI</span>
+                        <figure class="tarjeta" data-tipo="Capping" data-detalle="Blancas con lunares y flores">
+                            <img src="imagenes/uñas2.jpeg" alt="Uñas blancas con lunares y flores" draggable="false">
+                        </figure>
 
-                    <h1>
-                        Tus manos también
-                        <em>merecen brillar</em> ♡
-                    </h1>
+                        <figure class="tarjeta" data-tipo="Acrílicas" data-detalle="Azules con lunares y estrellas">
+                            <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (3).jpeg" alt="Uñas azules con lunares y estrellas" draggable="false">
+                        </figure>
 
-                    <p>
-                        Me llamo Evi y soy manicurista principiante.
-                        Creo que unas uñas lindas no son solamente un detalle,
-                        sino una forma de expresar quién sos.
-                    </p>
+                        <figure class="tarjeta" data-tipo="Capping" data-detalle="Rojo y dorado con lunares">
+                            <img src="imagenes/uñas3.jpeg" alt="Uñas rojas y doradas con lunares" draggable="false">
+                        </figure>
 
-                    <p>
-                        Mi objetivo es que cada vez que vengas tengas un
-                        momento para vos, con diseños que te representen,
-                        productos de calidad y una atención totalmente personalizada.
-                    </p>
+                        <figure class="tarjeta" data-tipo="Acrílicas" data-detalle="Francés rojo con flores">
+                            <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25.jpeg" alt="Uñas rojas con francés y flores" draggable="false">
+                        </figure>
 
-                    <!-- Características -->
-                    <div class="caracteristicas">
+                        <figure class="tarjeta" data-tipo="Capping" data-detalle="Nude, animal print y dorado">
+                            <img src="imagenes/uñas4.jpeg" alt="Uñas nude con animal print y detalles dorados" draggable="false">
+                        </figure>
 
-                        <article class="caracteristica">
-                            <div class="icono-caracteristica">
-                                <i data-lucide="sparkles"></i>
-                            </div>
-                            <h3>Diseños únicos</h3>
-                            <p>Porque cada estilo tiene su propia esencia.</p>
-                        </article>
-
-                        <article class="caracteristica">
-                            <div class="icono-caracteristica">
-                                <i data-lucide="heart"></i>
-                            </div>
-                            <h3>Atención personalizada</h3>
-                            <p>Porque cada clienta es especial.</p>
-                        </article>
-
-                        <article class="caracteristica">
-                            <div class="icono-caracteristica">
-                                <i data-lucide="flower-2"></i>
-                            </div>
-                            <h3>Ambiente relajado</h3>
-                            <p>Tu momento de cuidado también es bienestar.</p>
-                        </article>
-
-                        <article class="caracteristica">
-                            <div class="icono-caracteristica">
-                                <i data-lucide="shield-check"></i>
-                            </div>
-                            <h3>Productos de calidad</h3>
-                            <p>Para un acabado duradero y seguro.</p>
-                        </article>
+                        <figure class="tarjeta" data-tipo="Capping" data-detalle="Grises con glitter">
+                            <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (1).jpeg" alt="Uñas grises con glitter" draggable="false">
+                        </figure>
 
                     </div>
-
-                    <a href="registrar-turno.html" class="boton-principal">
-                        <i data-lucide="calendar-days"></i>
-                        <span>¡Reservá tu turno!</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-
+                    <div class="carrusel-piso" aria-hidden="true"></div>
                 </div>
 
-            </div>
+                <div class="catalogo-info">
+                    <div class="contador" aria-hidden="true">
+                        <span id="contador-actual">01</span>
+                        <span class="contador-linea"></span>
+                        <span id="contador-total">11</span>
+                    </div>
+                    <div class="ficha" aria-live="polite">
+                        <p class="ficha-tipo" id="ficha-tipo">Capping</p>
+                        <p class="ficha-detalle" id="ficha-detalle">Rosas con flores y pedrería</p>
+                    </div>
+                    <div class="controles">
+                        <button type="button" class="control" id="anterior" aria-label="Diseño anterior">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+                        </button>
+                        <button type="button" class="control" id="siguiente" aria-label="Diseño siguiente">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                    </div>
+                </div>
 
+                <div class="progreso" aria-hidden="true"><span id="progreso-barra"></span></div>
+
+                <p class="pista" aria-hidden="true">
+                    <span class="pista-desktop"><span class="raton"><span></span></span> Scrolleá para girar</span>
+                    <span class="pista-movil"><span class="dedo">⟷</span> Deslizá para girar</span>
+                </p>
+            </div>
         </section>
 
 
-        <!-- ==================== MIS TRABAJOS ==================== -->
-        <section id="mis-trabajos" class="seccion-trabajos">
+        <!-- ==================== SOBRE MÍ ==================== -->
+        <section class="sobre" id="sobre-mi">
+            <div class="contenedor sobre-grid">
 
-            <div class="contenedor">
+                <div class="sobre-foto revelar">
+                    <img src="imagenes/uñas4.jpeg" alt="Trabajo de Evi: uñas nude con animal print" loading="lazy">
+                    <span class="sobre-sello">Evi</span>
+                </div>
 
-                <div class="encabezado-seccion">
-                    <span class="etiqueta-seccion">MIS TRABAJOS</span>
-                    <h2>Diseños que hablan <em>de vos</em></h2>
-                    <p>
-                        Algunos de mis trabajos favoritos.
-                        Inspirate y encontrá el estilo perfecto para vos.
+                <div class="sobre-texto">
+                    <p class="kicker revelar">Sobre mí</p>
+                    <h2 class="revelar">Tus manos también <em>merecen brillar</em></h2>
+                    <p class="revelar">
+                        Me llamo Evi. Creo que unas uñas lindas no son solamente un detalle,
+                        sino una forma de expresar quién sos.
                     </p>
-                </div>
+                    <p class="revelar">
+                        Mi objetivo es que cada vez que vengas tengas un momento para vos,
+                        con diseños que te representen, productos de calidad y una atención
+                        totalmente personalizada.
+                    </p>
 
-                <div class="galeria-trabajos">
-
-                    <a href="trabajos.html" class="trabajo" aria-label="Ver todos los trabajos">
-                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (1).jpeg" alt="Diseño de uñas 1">
-                    </a>
-
-                    <a href="trabajos.html" class="trabajo" aria-label="Ver todos los trabajos">
-                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.24 (2).jpeg" alt="Diseño de uñas 2">
-                    </a>
-
-                    <a href="trabajos.html" class="trabajo" aria-label="Ver todos los trabajos">
-                        <img src="imagenes/WhatsApp Image 2026-11-02 at 19.57.25 (5).jpeg" alt="Diseño de uñas 3">
-                    </a>
-
-                    <a href="trabajos.html" class="trabajo" aria-label="Ver todos los trabajos">
-                        <img src="imagenes/uñas1.jpeg" alt="Diseño de uñas 4">
-                    </a>
-
-                </div>
-
-                <div class="acciones-trabajos">
-                    <a href="trabajos.html" class="boton-principal">
-                        <i data-lucide="images"></i>
-                        <span>Ver todos mis trabajos</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
+                    <ul class="valores">
+                        <li class="revelar">
+                            <span class="valor-num">01</span>
+                            <div><h3>Diseños únicos</h3><p>Cada estilo tiene su propia esencia.</p></div>
+                        </li>
+                        <li class="revelar">
+                            <span class="valor-num">02</span>
+                            <div><h3>Atención personalizada</h3><p>Porque cada clienta es especial.</p></div>
+                        </li>
+                        <li class="revelar">
+                            <span class="valor-num">03</span>
+                            <div><h3>Ambiente relajado</h3><p>Tu momento de cuidado también es bienestar.</p></div>
+                        </li>
+                        <li class="revelar">
+                            <span class="valor-num">04</span>
+                            <div><h3>Productos de calidad</h3><p>Para un acabado duradero y seguro.</p></div>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
-
         </section>
 
 
         <!-- ==================== SERVICIOS ==================== -->
-        <section id="servicios" class="seccion-servicios">
-
+        <section class="servicios" id="servicios">
             <div class="contenedor">
 
-                <div class="encabezado-seccion">
-                    <span class="etiqueta-seccion">SERVICIOS Y PRECIOS</span>
+                <div class="encabezado revelar">
+                    <p class="kicker">Servicios y precios</p>
                     <h2>Elegí tu próximo <em>look</em></h2>
-                    <p>
-                        Servicios pensados para que tus manos se vean y se sientan increíbles.
-                    </p>
                 </div>
 
-                <div class="lista-servicios">
-
-                    <article class="servicio">
-                        <div>
-                            <h3>Esmaltado Semipermanente</h3>
-                            <p>Esmaltado de secado inmediato y de larga duración.</p>
+                <ol class="lista-precios">
+                    <li class="revelar">
+                        <div class="precio-nombre">
+                            <h3>Esmaltado semipermanente</h3>
+                            <p>Secado inmediato y larga duración.</p>
                         </div>
-                        <strong>8.000ARS$</strong>
-                    </article>
-
-                    <article class="servicio">
-                        <div>
+                        <span class="precio-linea" aria-hidden="true"></span>
+                        <strong>$8.000</strong>
+                    </li>
+                    <li class="revelar">
+                        <div class="precio-nombre">
                             <h3>Dipping</h3>
-                            <p>Color, grosor, y una gran resistencia</p>
+                            <p>Color, grosor y una gran resistencia.</p>
                         </div>
-                        <strong>10.000ARS$</strong>
-                    </article>
-
-                    <article class="servicio">
-                        <div>
+                        <span class="precio-linea" aria-hidden="true"></span>
+                        <strong>$10.000</strong>
+                    </li>
+                    <li class="revelar">
+                        <div class="precio-nombre">
                             <h3>Kapping</h3>
                             <p>Fortalecimiento y acabado fino.</p>
                         </div>
-                        <strong>12.000ARS$</strong>
-                    </article>
-
-                    <article class="servicio">
-                        <div>
+                        <span class="precio-linea" aria-hidden="true"></span>
+                        <strong>$12.000</strong>
+                    </li>
+                    <li class="revelar">
+                        <div class="precio-nombre">
                             <h3>PolyGel</h3>
                             <p>Extensión liviana, natural y de larga duración.</p>
                         </div>
-                        <strong>14.000ARS$</strong>
-                    </article>
-
-                    <article class="servicio">
-                        <div>
-                            <h3>Uñas Acrílicas</h3>
-                            <p>Durabilidad, larga duración y versatilidad.</p>
+                        <span class="precio-linea" aria-hidden="true"></span>
+                        <strong>$14.000</strong>
+                    </li>
+                    <li class="revelar">
+                        <div class="precio-nombre">
+                            <h3>Uñas acrílicas</h3>
+                            <p>Durabilidad y versatilidad.</p>
                         </div>
-                        <strong>15.000ARS$</strong>
-                    </article>
+                        <span class="precio-linea" aria-hidden="true"></span>
+                        <strong>$15.000</strong>
+                    </li>
+                </ol>
 
+                <div class="servicios-cta revelar">
+                    <a href="registrar-turno.html" class="boton boton-relleno">Reservá tu turno</a>
+                    <a href="trabajos.html" class="boton boton-linea">Ver galería completa</a>
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- ==================== RESERVAR TURNO ==================== -->
-        <section id="turno" class="seccion-turno">
+        <!-- ==================== CONTACTO + MAPA 3D ==================== -->
+        <section class="contacto" id="contacto">
+            <div class="contenedor contacto-grid">
 
-            <div class="contenedor">
+                <div class="contacto-texto">
+                    <p class="kicker revelar">Contacto</p>
+                    <h2 class="revelar">Vení a <em>visitarme</em></h2>
+                    <p class="revelar">
+                        Escribime por el medio que prefieras y coordinamos el día y horario
+                        que mejor te quede. ♡
+                    </p>
 
-                <div class="tarjeta-turno">
+                    <div class="canales">
+                        <a class="canal revelar" href="https://wa.me/5491159372996" target="_blank" rel="noopener noreferrer">
+                            <span class="canal-icono"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+                            <span class="canal-texto"><strong>WhatsApp</strong><small>Escribime para reservar</small></span>
+                            <span class="canal-flecha" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="canal revelar" href="https://www.instagram.com/claws.bby" target="_blank" rel="noopener noreferrer">
+                            <span class="canal-icono"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+                            <span class="canal-texto"><strong>Instagram</strong><small>@claws.bby</small></span>
+                            <span class="canal-flecha" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="canal revelar" href="https://www.facebook.com/share/1Sc2dKCWpE/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <span class="canal-icono"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span>
+                            <span class="canal-texto"><strong>Facebook</strong><small>Encontrame también por acá</small></span>
+                            <span class="canal-flecha" aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
 
-                    <div class="turno-texto">
-                        <span class="etiqueta-seccion">RESERVÁ TU MOMENTO</span>
-
-                        <h2>
-                            Tus manos merecen
-                            <em>un momento para vos</em> ♡
-                        </h2>
-
-                        <p>
-                            Elegí el servicio que quieras y coordinemos
-                            el día y horario que mejor te quede.
-                        </p>
+                <div class="mapa-bloque revelar">
+                    <div class="mapa-marco">
+                        <div class="mapa" id="mapa" role="region" aria-label="Mapa 3D con la ubicación de Claws Bby"></div>
+                        <span class="mapa-etiqueta" aria-hidden="true">3D</span>
                     </div>
 
-                    <a href="registrar-turno.html" class="boton-principal boton-claro">
-                        <i data-lucide="calendar-days"></i>
-                        <span>Registrar turno</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-
+                    <div class="ubicacion">
+                        <p class="ubicacion-nombre">Recondo 961</p>
+                        <p class="ubicacion-detalle">entre Roberto Arlt y Unamuno</p>
+                        <p class="ubicacion-localidad">Villa Fiorito · Lomas de Zamora · Buenos Aires</p>
+                        <a class="boton boton-linea boton-chico"
+                           href="https://www.google.com/maps/dir/?api=1&destination=Francisco+Recondo+961,+Villa+Fiorito,+Buenos+Aires,+Argentina"
+                           target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a>
+                    </div>
                 </div>
 
             </div>
+        </section>
 
+
+        <!-- ==================== CTA FINAL ==================== -->
+        <section class="final">
+            <div class="contenedor final-contenido revelar">
+                <p class="final-firma" aria-hidden="true">Claws bby</p>
+                <h2>Tus manos merecen <em>un momento para vos</em></h2>
+                <a href="registrar-turno.html" class="boton boton-claro">Registrar turno</a>
+            </div>
         </section>
 
     </main>
 
 
     <!-- ==================== FOOTER ==================== -->
-    <footer class="pie-pagina">
-
+    <footer class="pie">
         <div class="contenedor pie-contenido">
-
-            <div class="pie-marca">
-                <span class="logo-nombre">Claws Bby ♡</span>
-                <span class="logo-subtitulo">MANICURÍA A TU GUSTO</span>
+            <span class="pie-firma">Claws bby</span>
+            <div class="pie-redes">
+                <a href="https://www.instagram.com/claws.bby" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://wa.me/5491159372996" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/share/1Sc2dKCWpE/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
             </div>
-
-            <div class="redes-sociales">
-                <a href="https://www.instagram.com/claws.bby?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="https://wa.me/5491159372996" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <a href="https://www.facebook.com/share/1Sc2dKCWpE/?mibextid=wwXIfr" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-
-            </div>
-
-            <p class="copyright">
-                © 2026 Claws Bby. Todos los derechos reservados.
-            </p>
-
+            <p>© 2026 Claws Bby · Recondo 961, Villa Fiorito</p>
         </div>
-
     </footer>
 
 
-    <!-- ==================== JAVASCRIPT ==================== -->
-    <script>
-        lucide.createIcons();
+    <!-- ==================== VISOR DE FOTO ==================== -->
+    <dialog class="visor" id="visor" aria-label="Foto ampliada">
+        <button type="button" class="visor-cerrar" id="visor-cerrar" aria-label="Cerrar">✕</button>
+        <img id="visor-img" src="" alt="">
+        <p id="visor-texto"></p>
+    </dialog>
 
-        const botonMenu = document.querySelector(".boton-menu");
-        const menuPrincipal = document.querySelector(".menu-principal");
 
-        botonMenu.addEventListener("click", () => {
-            menuPrincipal.classList.toggle("menu-abierto");
-        });
-
-        document.querySelectorAll(".enlace-menu").forEach((enlace) => {
-            enlace.addEventListener("click", () => {
-                menuPrincipal.classList.remove("menu-abierto");
-            });
-        });
-
-        /* Repetir la animación de entrada al volver con el botón Atrás */
-
-        window.addEventListener("pageshow", (evento) => {
-            if (evento.persisted) {
-                document.body.classList.remove("pagina-animada");
-                void document.body.offsetWidth;
-                document.body.classList.add("pagina-animada");
-            }
-        });
-    </script>
-
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
+    <script src="js/landing.js" defer></script>
 </body>
 </html>
